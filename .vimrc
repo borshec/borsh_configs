@@ -19,6 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'nvie/vim-flake8'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'klen/python-mode'
+Plugin 'nanotech/jellybeans.vim'
 "Plugin 'bitc/vim-bad-whitespace'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
