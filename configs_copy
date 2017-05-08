@@ -1,5 +1,0 @@
-#!bash
-mv -f .bash_profile ~/.bash_profile
-mv -f .gitconfig ~/.gitconfig
-mv -f .inputrc ~/.inputrc
-mv -f .vimrc ~/.vimrc
