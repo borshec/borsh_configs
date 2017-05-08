@@ -1,0 +1,4 @@
+#!bash
+apt update
+apt upgrade
+apt install apt bash busybox command-not-found coreutils dash dpkg findutils gawk git gpgv grep gzip htop hub less libandroid-support libgnustl liblzma man mc ncurses openssh postgresql python readline rsync screen screenfetch tar termux-tools tree unrar unzip vim-python wget zip 
