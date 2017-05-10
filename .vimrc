@@ -29,16 +29,20 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " pymode preference
-"let g:pymode = 1
-"let g:pymode_python = 'python3'
-"let g:pymode_indent = 1
-"let g:pymode_folding = 1
+let g:pymode = 1
+let g:pymode_python = 'python3'
+let g:pymode_indent = 1
+let g:pymode_folding = 1
+let g:pymode_doc = 1
+let g:pymode_doc_bind = 'K'
+let g:pymode_run = 1
+let g:pymode_run_bind = '<C-r>'
 
 "split navigations
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " Enable folding
 "set foldmethod=indent
