@@ -3,3 +3,4 @@ cp .bash_profile ~/.bash_profile
 cp .gitconfig ~/.gitconfig
 cp .inputrc ~/.inputrc
 cp .vimrc ~/.vimrc
+vim -c 'PluginInstall' -c 'qa'
