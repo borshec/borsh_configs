@@ -22,7 +22,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'klen/python-mode'
 "Plugin 'nanotech/jellybeans.vim'
 "Plugin 'bitc/vim-bad-whitespace'
-Plugin 'preocanin/greenwint'
+Plugin 'scrooloose/nerdtree'
+
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 
@@ -40,11 +41,14 @@ let g:pymode_doc_bind = 'K'
 let g:pymode_run = 1
 let g:pymode_run_bind = '<C-r>'
 
+" keymaps
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" nerdtree
+map <C-n> :NERDTreeToggle<CR>
 
 " Enable folding
 "set foldmethod=indent
