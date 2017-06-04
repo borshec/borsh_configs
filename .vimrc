@@ -4,13 +4,9 @@ filetype off                  " required
 " string numbering
 set nu
 
-" enable syntax coloring
-colo darkblue 
-syntax on
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#rc()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -23,7 +19,12 @@ Plugin 'klen/python-mode'
 "Plugin 'nanotech/jellybeans.vim'
 "Plugin 'bitc/vim-bad-whitespace'
 Plugin 'scrooloose/nerdtree'
+Plugin 'baskerville/bubblegum'
 
+" enable syntax coloring
+" colo darkblue 
+colorscheme bubblegum-256-dark
+syntax on
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 
