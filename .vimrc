@@ -1,3 +1,4 @@
+" non compatible with vi mode
 set nocompatible              " required
 filetype off                  " required
 
@@ -6,7 +7,7 @@ set nu
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -16,21 +17,30 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'nvie/vim-flake8'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'klen/python-mode'
-"Plugin 'nanotech/jellybeans.vim'
+"Plugin 'nanotech/jellybeans.vim' bad theme
 "Plugin 'bitc/vim-bad-whitespace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'baskerville/bubblegum'
+"Plugin 'morhetz/gruvbox' not working properly
+"Plugin 'zcodes/vim-colors-basic'
+"Plugin 'jnurmine/Zenburn'
+Plugin 'vim-scripts/256-jungle'
 
-" enable syntax coloring
-" colo darkblue 
-colorscheme bubblegum-256-dark
-syntax on
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" enable syntax coloring
+set t_Co=256
+" colo darkblue 
+"colorscheme bubblegum-256-dark
+colorscheme 256-jungle 
+"colorscheme gruvbox 
+"colorscheme zenburn 
+syntax on
 
 " pymode preference
 let g:pymode = 1
@@ -42,7 +52,7 @@ let g:pymode_doc_bind = 'K'
 let g:pymode_run = 1
 let g:pymode_run_bind = '<C-r>'
 
-" keymaps
+"keymaps
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
