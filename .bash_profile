@@ -3,5 +3,5 @@ PS1="[\[\e[32m\]\A\[\e[m\]][\[\e[32m\]\W\[\e[m\]]# "
 alias tmuxa='tmux attach'
 alias tmuxd='tmux detach'
 alias lsa='ls -la'
-alias ls='ls -l'
+#alias ls='ls -l'
 alias mc='mc -x'

@@ -11,21 +11,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'tmhedberg/SimpylFold'
-"Plugin 'vim-scripts/indentpython.vim'
-"Plugin 'scrooloose/syntastic'
-"Plugin 'nvie/vim-flake8'
-"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'klen/python-mode'
-"Plugin 'nanotech/jellybeans.vim' bad theme
-"Plugin 'bitc/vim-bad-whitespace'
 Plugin 'scrooloose/nerdtree'
-Plugin 'baskerville/bubblegum'
-"Plugin 'morhetz/gruvbox' not working properly
-"Plugin 'zcodes/vim-colors-basic'
-"Plugin 'jnurmine/Zenburn'
-Plugin 'vim-scripts/256-jungle'
-
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 
@@ -35,12 +22,9 @@ filetype plugin indent on    " required
 
 " enable syntax coloring
 set t_Co=256
-" colo darkblue 
-"colorscheme bubblegum-256-dark
-colorscheme 256-jungle 
-"colorscheme gruvbox 
-"colorscheme zenburn 
 syntax on
+" colorscheme setting
+colo pablo 
 
 " pymode preference
 let g:pymode = 1
@@ -84,6 +68,3 @@ map <C-n> :NERDTreeToggle<CR>
 
 " encoding
 set encoding=utf-8
-
-"let python_highlight_all=1
-
