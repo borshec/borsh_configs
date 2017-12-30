@@ -35,8 +35,14 @@ let g:pymode_doc = 1
 let g:pymode_doc_bind = 'K'
 let g:pymode_run = 1
 let g:pymode_run_bind = '<C-r>'
+let g:pymode_virtualenv = 1
+"let g:pymode_virtualenv_path = '/data/data/com.termux/files/home/projects/venv_borsh_30122017'
 
 " autocomplete options
+let g:pymode_rope = 1
+let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 1
+let g:pymode_rope_completion_bind = '<C-Space>'
 :set completeopt=longest,menuone
 "keymaps
 "split navigations
