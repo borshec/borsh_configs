@@ -1,0 +1,67 @@
+*filter
+#
+#
+# # Allow all outgoing packets 
+# # there are no other rules for OUTPUT
+:OUTPUT ACCEPT 
+#
+#
+# # Allow all ingoing packets 
+# # There is DROP rule for unknown packets at the end of ruleset
+:INPUT ACCEPT
+#
+#
+# # Allows all incomming loopback (lo0) traffic and drop all traffic to 127/8 that doesn't use lo0
+-A INPUT -i lo -j ACCEPT
+-A INPUT ! -i lo -d 127.0.0.0/8 -j REJECT
+#
+#
+# # Accepts all established inbound connections
+-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+#
+#
+# # Allows HTTP and HTTPS connections from anywhere (the normal ports for websites)
+-A INPUT -s 192.168.2.0/24 -d 192.168.2.1 -p tcp --dport 80 -j ACCEPT
+# -A INPUT -p tcp --dport 443 -j ACCEPT
+#
+#
+# # Allows SSH connections 
+-A INPUT -s 192.168.2.0/24 -d 192.168.2.1 -p tcp --dport 22 -m state --state NEW -j ACCEPT
+#
+#
+# # Allow openvpn
+-A INPUT -p udp --dport 1194 -m state --state NEW -j ACCEPT
+#
+#
+# # Allow dhcp
+-A INPUT -p udp --dport 67 -m state --state NEW -j ACCEPT
+#
+#
+# # Allow all incomming ICMP traffic
+-A INPUT -p icmp -j ACCEPT
+#
+#
+# # Drop all other income packets
+-A INPUT -j DROP
+#
+#
+# # Allow all forward packets 
+# # There is DROP rule for unknown packets at the end of ruleset
+:FORWARD ACCEPT
+-A FORWARD -s 192.168.2.0/24 -j ACCEPT
+-A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+# # Drop all other forward packets
+-A FORWARD -j DROP
+#
+#
+# # Final commit for filter table
+COMMIT
+
+
+*nat
+:PREROUTING ACCEPT
+:INPUT ACCEPT
+:OUTPUT ACCEPT
+:POSTROUTING ACCEPT
+-A POSTROUTING -s 192.168.2.0/24 -o eth0 -j MASQUERADE
+COMMIT
