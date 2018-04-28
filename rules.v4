@@ -33,6 +33,10 @@
 -A INPUT -p udp --dport 1194 -m state --state NEW -j ACCEPT
 #
 #
+# # Allow dns
+-A INPUT -p udp --dport 53 -m state --state NEW -j ACCEPT
+#
+#
 # # Allow dhcp
 -A INPUT -p udp --dport 67 -m state --state NEW -j ACCEPT
 #
@@ -63,5 +67,7 @@ COMMIT
 :INPUT ACCEPT
 :OUTPUT ACCEPT
 :POSTROUTING ACCEPT
+-A PREROUTING -s 192.168.2.0/24 -p tcp --dport 53 -j DNAT --to-destination 192.168.2.1:53
+-A PREROUTING -s 192.168.2.0/24 -p udp --dport 53 -j DNAT --to-destination 192.168.2.1:53
 -A POSTROUTING -s 192.168.2.0/24 -o eth0 -j MASQUERADE
 COMMIT
