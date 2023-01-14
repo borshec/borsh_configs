@@ -72,3 +72,4 @@ set guioptions-=m  "menu bar
 set guioptions-=T  "toolbar
 set guioptions-=r  "scrollbar
 set guifont=Fira\ Code\ Regular:h10
+set lines=40 columns=130
