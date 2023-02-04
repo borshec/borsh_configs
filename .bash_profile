@@ -8,5 +8,6 @@ alias lsa='ls -la'
 #alias ls='ls -l'
 alias mc='mc -x'
 
+# It's for virtualenvwrapper
 #export WORKON_HOME="$HOME/.venvs"
-#source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+#source /usr/share/virtualenvwrapper/virtualenvwrapper.sh 1> /dev/null 2> /dev/null
