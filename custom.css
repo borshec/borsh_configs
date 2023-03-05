@@ -1,0 +1,41 @@
+/*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+div#notebook p, div#notebook
+{
+    font-size: 8px;
+}
+
+.rendered_html pre, .rendered_html table
+{
+    font-size: 7px;
+}
+
+div.output pre, div.output code, .rendered_html pre, .rendered_html code, div.completions select, div.container pre 
+{
+    font-family: Consolas, monaco, monospace;
+}
+
+div.output pre, div.output code, .rendered_html pre, .rendered_html p code, div.completions select, div.container pre 
+{
+    font-size: 6pt;
+}
+
+.CodeMirror, .CodeMirror pre, .CodeMirror-dialog, .CodeMirror-search-field, .terminal-app .terminal 
+{
+    font-size: 8px;
+}
+
+.terminal-app .terminal
+{
+    line-height: 1.3em;
+}
+
